@@ -1,7 +1,3 @@
-function sleep(milliseconds) {
-    return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
-
 function main() {
     var url = window.location.href
     if(url.includes("snkrs")) {
