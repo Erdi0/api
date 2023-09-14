@@ -2,7 +2,7 @@ function sleep(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-async function main() {
+function main() {
     var url = window.location.href
     if(url.includes("snkrs")) {
         snkrs_url = url.split('=')[1]
@@ -14,9 +14,13 @@ async function main() {
     }
     if(url.includes("copy")) {
         copy_value = url.split('=')[1]
-        await navigator.clipboard.writeText(copy_value)
-        window.location = "discord://discordapp.com/channels/1008083647817072640/1064639476107837521"; 
+        document.onclick = clickedHandler
     }
+}
+
+async function clickedHandler() {
+    await navigator.clipboard.writeText(copy_value)
+    window.location = "discord://discordapp.com/channels/1008083647817072640/1064639476107837521"; 
 }
 
 main()
