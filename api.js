@@ -10,7 +10,7 @@ function main() {
     }
     if(url.includes("stockx")) {
         stockx_url = url.split('=')[1]
-        window.location = "stockx://" + stockx_url
+        window.location = "stockx://search?s=" + stockx_url
     }
     if(url.includes("copy")) {
         copy_value = url.split('=')[1]
