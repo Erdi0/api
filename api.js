@@ -8,6 +8,10 @@ function main() {
         nike_url = url.split('=')[1]
         window.location = "mynike://x-callback-url/product-details?style-color=" + nike_url + "&redirect=true&platform=ios%60"; 
     }
+    if(url.includes("stockx")) {
+        stockx_url = url.split('=')[1]
+        window.location = "stockx://" + stockx_url
+    }
     if(url.includes("copy")) {
         copy_value = url.split('=')[1]
         document.onclick = clickedHandler
