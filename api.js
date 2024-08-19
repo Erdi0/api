@@ -20,7 +20,7 @@ function main() {
 
 async function clickedHandler() {
     await navigator.clipboard.writeText(copy_value)
-    window.location = "discord://discordapp.com/channels/1008083647817072640/1064639476107837521"; 
+    window.location = "discord://discordapp.com/channels/1162420839262724226/1265394024945287219"; 
 }
 
 main()
