@@ -16,6 +16,10 @@ function main() {
         copy_value = url.split('=')[1]
         document.onclick = clickedHandler
     }
+    if(url.includes("coin")) {
+        coin_url = url.split('=')[1]
+        document.onclick = window.location = "bitget://app.bitget.com/home/coin?symbol=" + coin_url
+    }
 }
 
 async function clickedHandler() {
